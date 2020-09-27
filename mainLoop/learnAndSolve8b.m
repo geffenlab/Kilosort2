@@ -281,6 +281,9 @@ for ibatch = 1:niter
         end
        
        if ops.fig
+           
+           ops.figHandle = figHand;
+           
            subplot(2,2,1)
            imagesc(W(:,:,1))
            title('Temporal Components')
@@ -308,6 +311,7 @@ for ibatch = 1:niter
            xlabel('Spike Count'); 
            ylabel('Amplitude (arb. units)');        
            drawnow
+           
         end
     end
 end
